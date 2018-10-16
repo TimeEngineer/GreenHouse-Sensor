@@ -426,3 +426,4 @@ bool DS1820::read_power_supply(devices device) {
 }
 
 
+

@@ -71,7 +71,6 @@ public:
 	/// Cause the display to be updated with the buffer content.
 	void display();
 	/// Fill the buffer with the AdaFruit splash screen.
-	virtual void splash();
     
 protected:
 	virtual void sendDisplayBuffer() = 0;
@@ -107,7 +106,6 @@ public:
 	    , mspi(spi)
 	    {
 		    begin();
-		    splash();
 		    display();
 	    };
 
@@ -176,7 +174,6 @@ public:
 	    , mi2cAddress(i2cAddress)
 	    {
 		    begin();
-		    splash();
 		    display();
 	    };
 
