@@ -21,8 +21,6 @@ public:
     };
     enum Unit {
         CELCIUS,
-        FARENHEIT,
-        KELVIN,
     };
     DHT(PinName pin, Family DHTtype);
     ~DHT();
@@ -39,9 +37,6 @@ private:
     int _data[5];
     float calcTemperature();
     float calcHumidity();
-    float toFarenheit(float);
-    float toKelvin(float);
-
 };
 
 #endif

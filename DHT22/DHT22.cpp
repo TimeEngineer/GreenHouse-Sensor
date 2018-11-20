@@ -146,21 +146,8 @@ float DHT::calcHumidity() {
     return 0;
 }
 
-float DHT::toFarenheit(float celsius) {
-    return celsius * 9 / 5 + 32;
-}
-
-float DHT::toKelvin(float celsius) {
-    return celsius + 273.15;
-}
-
 float DHT::getTemperature(Unit unit) {
-    if (unit == FARENHEIT)
-        return toFarenheit(_lastTemperature);
-    else if (unit == KELVIN)
-        return toKelvin(_lastTemperature);
-    else
-        return _lastTemperature;
+    return _lastTemperature;
 }
 
 float DHT::getHumidity() {
