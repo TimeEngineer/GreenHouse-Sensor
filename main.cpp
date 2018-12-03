@@ -14,11 +14,12 @@ DS1820 probe(A0); // analog
 
 float water = 0.389;
 float dry = 0.761;
-
 void initialisation()
 {
+    
     Lum.enablePower();
     rgbc.enablePowerAndRGBC();
+    probe.unassignedProbe(A0);
 }
 
 void send()
@@ -51,14 +52,14 @@ void mycallback(void){}
 int main()
 {
     WakeUp::calibrate();   
+    WakeUp::attach(&mycallback);
     while(1)
     {
         initialisation();
-        wait(1);
+        wait(2);
         send();
-        wait(8);
-        WakeUp::set_ms(50000);
-        WakeUp::attach(&mycallback);
+        wait(10);
+        WakeUp::set_ms(20000);
         deepsleep();
     }
 }    
