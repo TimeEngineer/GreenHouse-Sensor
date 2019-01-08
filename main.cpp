@@ -109,11 +109,13 @@ int main()
     {
         initialisation();
         wait(2);
-        send();
-        wait(10);
-        print();
         if (flag) {
-            WakeUp::set_ms(540000);
+            print();
+        }
+        else {
+            send();
+            wait(10);
+            WakeUp::set_ms(548000);
             deepsleep();
         }
     }
