@@ -104,7 +104,6 @@ int main()
     WakeUp::calibrate();   
     WakeUp::attach(&mycallback);
     gOled.display();
-    gOled.printf("%ux%u OLED Display\r\n", gOled.width(), gOled.height());
     while(1)
     {
         initialisation();
@@ -113,6 +112,9 @@ int main()
             print();
         }
         else {
+            gOled.clearDisplay();
+            gOled.printf("");
+            gOled.display();
             send();
             wait(10);
             WakeUp::set_ms(548000);
