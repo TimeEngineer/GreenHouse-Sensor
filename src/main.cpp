@@ -48,7 +48,7 @@ void send()
         if (hvalue < water) { water = hvalue; } 
         int g_humidity = int((-hvalue + dry)/(dry-water)*1000);
             
-        int luminosity = int(Lum.getLux());
+        int luminosity = int(Lum.getLux()*14.6);
             
         int rgbc_datas[4];
         rgbc.getAllColors(rgbc_datas);
@@ -72,7 +72,7 @@ void print() {
     wait(2);
     
     gOled.clearDisplay();
-    int luminosity = int(Lum.getLux());
+    int luminosity = int(Lum.getLux()*14.6);
     gOled.printf("L:%d x1\r",luminosity);
     gOled.display(); 
     wait(2);
