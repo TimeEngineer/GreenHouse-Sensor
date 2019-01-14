@@ -12,7 +12,7 @@ These are the pcb images :
 
 ![alt text](https://github.com/TimeEngineer/GreenHouse-Sensor/blob/master/doc/PCB/bottom_pcb.PNG "bottom_pcb")
 
-![alt text](https://github.com/TimeEngineer/GreenHouse-Sensor/blob/master/doc/PCB/top_pcb.PNG "top_sheet")
+![alt text](https://github.com/TimeEngineer/GreenHouse-Sensor/blob/master/doc/PCB/top_sheet.PNG "top_sheet")
 
 ![alt text](https://github.com/TimeEngineer/GreenHouse-Sensor/blob/master/doc/PCB/top_pcb.PNG "top_pcb")
 
